@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sardarji Da Dhaba • Authentic Punjabi Cuisine</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="logo.jpg" type="image/jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- View 1: Landing (only logo/title + Open Menu) -->
+  <section id="landing" class="view view--active" aria-label="Landing">
+    <header class="hero">
+<img src="C:\Users\ishpr\OneDrive\Desktop\index 1\logo.jpg" alt="sardarji11" class="logo">
+
+      <h1 class="brand">SARDARJI DA DHABA</h1>
+      <p class="tagline">AUTHENTIC PUNJABI CUISINE</p>
+    </header>
+
+    <main class="intro">
+      <p class="welcome">Welcome to Sardarji Da Dhaba</p>
+      <p class="hint">Pls click on the button to open menu</p>
+
+      <button id="openMenuBtn" class="btn btn--primary" type="button" aria-controls="menuView">
+        Open Menu
+      </button>
+
+      <div id="loading" class="loading" role="status" aria-live="polite" hidden>
+        Loading Delicious Menu...
+      </div>
+    </main>
+
+     </section>
+
+  <!-- View 2: Menu (entire menu + terms) -->
+  <section id="menuView" class="view" aria-label="Menu">
+    <header class="menu-header">
+      <h2 class="menu-title">Sardarji Da Dhaba</h2>
+      <p class="menu-sub">Authentic Punjabi Menu</p>
+      <button id="backBtn" class="btn btn--ghost" type="button" aria-controls="landing">
+        ← Back to Home
+      </button>
+    </header>
+
+    <main class="menu">
+      <!-- REUSABLE CATEGORY TEMPLATE:
+        <section class="card">
+          <h3 class="card__title">CATEGORY NAME</h3>
+          <ul class="list">
+            <li class="row"><span class="name">Item</span><span class="price">100/-</span></li>
+          </ul>
+        </section>
+      -->
+
+      <!-- Breakfast -->
+      <section class="card">
+        <h3 class="card__title">BREAKFAST</h3>
+        <ul class="list">
+          <li class="row"><span class="name">TEA</span><span class="price">20/-</span></li>
+          <li class="row"><span class="name">COFFEE</span><span class="price">20/-</span></li>
+          <li class="row"><span class="name">CHOLE BHATURE</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">VEG PAKODA</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">PANEER PAKODA</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">CHEESE PAKODA</span><span class="price">200/-</span></li>
+        </ul>
+      </section>
+
+      <!-- Chakna Chat -->
+      <section class="card">
+        <h3 class="card__title">CHAKNA CHAT</h3>
+        <ul class="list">
+          <li class="row"><span class="name">PEANUT FRY</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">GARLIC FRY</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">PEANUT CHAT</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">CHANA GARLIC</span><span class="price">140/-</span></li>
+          <li class="row"><span class="name">CHANA KOLIWADA</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">CHANA KOLIWADA (EXTRA GARLIC)</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">CHANA DRY</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">CHANA FRY PAN FRY</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">EGG BHURJI</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">EGG OMLETTE</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">EGG BOIL 2 PIECE</span><span class="price">50/-</span></li>
+        </ul>
+      </section>
+
+      <!-- Veg Soup -->
+      <section class="card">
+        <h3 class="card__title">VEG SOUP</h3>
+        <ul class="list">
+          <li class="row"><span class="name">MINESTRONI SOUP</span><span class="price">70/-</span></li>
+          <li class="row"><span class="name">CLEAR SOUP</span><span class="price">70/-</span></li>
+          <li class="row"><span class="name">SPINACH SOUP</span><span class="price">70/-</span></li>
+          <li class="row"><span class="name">SWEET CORN SOUP</span><span class="price">80/-</span></li>
+          <li class="row"><span class="name">CREAM OF VEG SOUP</span><span class="price">70/-</span></li>
+          <li class="row"><span class="name">HONGKONG SOUP</span><span class="price">80/-</span></li>
+          <li class="row"><span class="name">MANCHOW SOUP</span><span class="price">80/-</span></li>
+          <li class="row"><span class="name">CORIANDER SOUP</span><span class="price">80/-</span></li>
+        </ul>
+      </section>
+
+      <!-- Non Veg Soup -->
+      <section class="card">
+        <h3 class="card__title">NON VEG SOUP</h3>
+        <ul class="list">
+          <li class="row"><span class="name">CHICKEN CLEAR SOUP</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">CHICKEN MANCHOW SOUP</span><span class="price">120/-</span></li>
+          <li class="row"><span class="name">CREAM OF CHICKEN SOUP</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">CHICKEN HONGKONG SOUP</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">CHICKEN OKKAR SOUP</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">MUTTON OKKAR SOUP</span><span class="price">160/-</span></li>
+        </ul>
+      </section>
+
+      <!-- Veg Starter Indian -->
+      <section class="card">
+        <h3 class="card__title">VEG STARTER INDIAN</h3>
+        <ul class="list">
+          <li class="row"><span class="name">FINGER CHIPS</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">ALOO TIKKI</span><span class="price">140/-</span></li>
+          <li class="row"><span class="name">GOBI CHILLI</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">ALOO DHANIYA KEBAB</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">GOBI MANCHURIAN</span><span class="price">240/-</span></li>
+          <li class="row"><span class="name">VEG HARA BHARA KEBAB</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">CHEESE CORN TIKKI</span><span class="price">250/-</span></li>
+        </ul>
+      </section>
+
+      <!-- Tangi Veg (includes Paneer items, fries, kebabs) -->
+      <section class="card">
+        <h3 class="card__title">TANGI VEG</h3>
+        <ul class="list">
+          <li class="row"><span class="name">BABY CORN MUSHROOM CHILLI</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">STUFF MUSHROOM</span><span class="price">240/-</span></li>
+          <li class="row"><span class="name">SOYABEAN CHILLI</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">VEG CHILLI</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">MUSHROOM CHILLI</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">LEMON VEG</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">VEG SEEKH KEBAB</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">MUSHROOM TIKKA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">VEG CRUNCHY</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">VEG SHANGHAI</span><span class="price">270/-</span></li>
+          <li class="row"><span class="name">PANEER SCHEZWAN</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER CHILLI</span><span class="price">270/-</span></li>
+          <li class="row"><span class="name">PANEER BULLET</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">PANEER 65</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">PANEER MANCHURIAN</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER CRISPY</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">PANEER SATTE</span><span class="price">370/-</span></li>
+          <li class="row"><span class="name">MATKI FRY</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">GREEN PEAS FRY</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">PANEER KALIMERI</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">VEG CRISPY</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">PANEER TIKKA</span><span class="price">270/-</span></li>
+          <li class="row"><span class="name">PANEER PAHADI</span><span class="price">270/-</span></li>
+          <li class="row"><span class="name">VEG SEEKH KEBAB</span><span class="price">270/-</span></li>
+          <li class="row"><span class="name">VEG DILRUBA SHUK KEBAB</span><span class="price">290/-</span></li>
+          <li class="row"><span class="name">PANEER MALAI KEBAB</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER PAHADI KEBAB</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER BANJARA KEBAB</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER ANGARA KEBAB</span><span class="price">310/-</span></li>
+          <li class="row"><span class="name">PANEER PUDINA SEEKH KEBAB</span><span class="price">310/-</span></li>
+          <li class="row"><span class="name">PANEER JANAVI KEBAB</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">PANEER HARA MATAR KEBAB</span><span class="price">370/-</span></li>
+          <li class="row"><span class="name">PANEER AKBARI KEBAB</span><span class="price">320/-</span></li>
+        </ul>
+      </section>
+
+      <!-- Non Veg Starter Tandoori -->
+      <section class="card">
+        <h3 class="card__title">NON VEG STARTER TANDOORI</h3>
+        <ul class="list">
+          <li class="row"><span class="name">CHICKEN TANDOORI (FULL)</span><span class="price">550/-</span></li>
+          <li class="row"><span class="name">CHICKEN TANDOORI (HALF)</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">CHICKEN TIKKA</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">CHICKEN BANJARA KEBAB</span><span class="price">340/-</span></li>
+          <li class="row"><span class="name">CHICKEN RESHMI KEBAB</span><span class="price">340/-</span></li>
+          <li class="row"><span class="name">CHICKEN MALAI KEBAB</span><span class="price">340/-</span></li>
+          <li class="row"><span class="name">CHICKEN ACHARI KEBAB</span><span class="price">340/-</span></li>
+          <li class="row"><span class="name">CHICKEN PAHADI KEBAB</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHICKEN SEEKH KEBAB</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHICKEN GULATI KEBAB</span><span class="price">340/-</span></li>
+          <li class="row"><span class="name">MUTTON SHAMI KEBAB</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN JAMINI KEBAB</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN GOLDEN KEBAB</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHI CHILLI MILLI KEBAB</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHICKEN AFGHANI KEBAB</span><span class="price">400/-</span></li>
+          <li class="row"><span class="name">CHICKEN TANGDI KEBAB (4 PCS)</span><span class="price">400/-</span></li>
+          <li class="row"><span class="name">CHICKEN KALIMIRI</span><span class="price">450/-</span></li>
+          <li class="row"><span class="name">CHICKEN PAKODA (14 PCS)</span><span class="price">400/-</span></li>
+          <li class="row"><span class="name">CHICKEN SHOLE KEBAB</span><span class="price">400/-</span></li>
+          <li class="row"><span class="name">CHICKEN MAKHMALI KEBAB</span><span class="price">450/-</span></li>
+          <li class="row"><span class="name">CHICKEN HARIYALI KEBAB</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHICKEN ZAFRANI KEBAB</span><span class="price">400/-</span></li>
+        </ul>
+      </section>
+
+      <!-- Non Veg Chinese -->
+      <section class="card">
+        <h3 class="card__title">NON VEG CHINESE</h3>
+        <ul class="list">
+          <li class="row"><span class="name">CHICKEN HAKKA NOODLES</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">CHICKEN GINGER</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">CHICKEN FRIED RICE</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">CHICKEN GARLIC</span><span class="price">340/-</span></li>
+          <li class="row"><span class="name">CHICKEN SCHEZWAN</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">CHICKEN CHILLI</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN CRISPY</span><span class="price">380/-</span></li>
+          <li class="row"><span class="name">CHICKEN 65</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHICKEN MANCHURIAN</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHICKEN CHILLI PUNJABI</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">SHANGHAI CHICKEN</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">CHICKEN BULLET</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHICKEN LOLLIPOP</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">LEMON CHICKEN</span><span class="price">500/-</span></li>
+          <li class="row"><span class="name">THAI CHICKEN</span><span class="price">500/-</span></li>
+          <li class="row"><span class="name">CHICKEN TUKDA</span><span class="price">450/-</span></li>
+          <li class="row"><span class="name">EGG FRIED RICE</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">EGG SCHEZWAN RICE</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">EGG MANCHURIAN RICE</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">EGG KHEEMA MASALA</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">EGG AFGANI</span><span class="price">300/-</span></li>
+        </ul>
+      </section>
+
+      <!-- Veg Main Course (sample; extend similarly with all remaining items) -->
+      <section class="card">
+        <h3 class="card__title">VEG MAIN COURSE INDIAN</h3>
+        <ul class="list">
+          <li class="row"><span class="name">DAL FRY</span><span class="price">130/-</span></li>
+          <li class="row"><span class="name">ALOO MASALA</span><span class="price">130/-</span></li>
+          <li class="row"><span class="name">DAL KASURI</span><span class="price">130/-</span></li>
+          <li class="row"><span class="name">SHEV BHAJI</span><span class="price">130/-</span></li>
+          <li class="row"><span class="name">DUDH SHEV BHAJI</span><span class="price">140/-</span></li>
+          <li class="row"><span class="name">DAL TADKA</span><span class="price">160/-</span></li>
+          <li class="row"><span class="name">ALOO MATAR</span><span class="price">140/-</span></li>
+          <li class="row"><span class="name">GREEN PEAS MASALA</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">ALOO JEERA</span><span class="price">140/-</span></li>
+          <li class="row"><span class="name">BHENDI FRY</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">BAINGAN BHARTA</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">BAINGAN MASALA</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">VEG MAKHANWALA</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">DAL MAKHANI</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">MATAR PANEER</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">MIX VEG</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">PALAK PANEER</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">BHARLELI VANGI</span><span class="price">180/-</span></li>
+          <li class="row"><span class="name">VEG MARATHA</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">VEG HYDERABADI</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">METHI MASALA</span><span class="price">220/-</span></li>
+          <li class="row"><span class="name">DUM ALOO PUNJABI</span><span class="price">190/-</span></li>
+          <li class="row"><span class="name">VEG BANJARA MASALA</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">VEG DEEWANI HANDI</span><span class="price">210/-</span></li>
+          <li class="row"><span class="name">VEG KHEEMA MASALA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">VEG GRILL MASALA</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">METHI MATAR MALAI</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">VEG SEEKH KEBAB MASALA</span><span class="price">220/-</span></li>
+          <li class="row"><span class="name">VEG LAHORI</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">VEG BHUNA MASALA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">DUM ALOO KASHMIRI</span><span class="price">230/-</span></li>
+          <li class="row"><span class="name">VEG KOFTA CURRY</span><span class="price">230/-</span></li>
+          <li class="row"><span class="name">PANEER MASALA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">SHAHI PANEER</span><span class="price">240/-</span></li>
+          <li class="row"><span class="name">PANEER BUTTER MASALA</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">MALAI KOFTA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">PANEER BHURJI</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">VEG MAHARAJA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">PANEER MAKHANWALA</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">VEG NAVRATAN KORMA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">VEG GOLDEN KOFTA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">PANEER MASTANI</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">PANEER KORMA</span><span class="price">260/-</span></li>
+
+          <!-- Extended Special Veg (from pages 2–3) -->
+          <li class="row"><span class="name">PANEER HANDI</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER KOFTA MASALA</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER LAHORI</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">VEG RUJWADI</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER RAJWADI</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">PANEER DEEWANI HANDI</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER ANGARA</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">PANEER PATIALA</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">VEG PATIALA</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">PANEER MUMTAZ</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">VEG GARDEN</span><span class="price">450/-</span></li>
+          <li class="row"><span class="name">SARDARJI SPECIAL VEG</span><span class="price">400/-</span></li>
+          <li class="row"><span class="name">MUSHROOM MASALA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">KAJU CURRY</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">PANEER TIKKA MASALA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">KAJU MASALA</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">VEG KOLHAPURI</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">VEG MALAI KOFTA</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">PANEER KARAHI</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">LASUNI PALAK</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">LASUNI METHI</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">CHANA MASALA</span><span class="price">150/-</span></li>
+        </ul>
+      </section>
+
+      <!-- NON VEG INDIAN -->
+      <section class="card">
+        <h3 class="card__title">NON VEG INDIAN</h3>
+        <ul class="list">
+          <li class="row"><span class="name">CHICKEN MASALA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">CHICKEN KOLHAPURI</span><span class="price">270/-</span></li>
+          <li class="row"><span class="name">CHICKEN HYDERABADI</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">CHICKEN SUKHA</span><span class="price">270/-</span></li>
+          <li class="row"><span class="name">CHICKEN BHUNA</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">CHICKEN TAWA</span><span class="price">280/-</span></li>
+          <li class="row"><span class="name">CHICKEN MUGHLAI</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">CHICKEN AKBARI</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">DUM KA CHICKEN</span><span class="price">310/-</span></li>
+          <li class="row"><span class="name">CHICKEN GOAN CURRY</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN NIZAM</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN LAHORI</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN SAGIWAL</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN HIUMDUM</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN KHEEMA MASALA</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN ANGARA</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHICKEN NAGA PARA</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">CHI SEEKH KEBAB MASALA</span><span class="price">400/-</span></li>
+          <li class="row"><span class="name">CHICKEN DO PYAZA</span><span class="price">330/-</span></li>
+          <li class="row"><span class="name">CHICKEN TANDOORI MASALA</span><span class="price">330/-</span></li>
+
+          <!-- Handi / Half–Full items -->
+          <li class="row"><span class="name">CHICKEN HANDI REDBLACK (HALF)</span><span class="price">380/-</span></li>
+          <li class="row"><span class="name">CHICKEN HANDI REDBLACK (FULL)</span><span class="price">700/-</span></li>
+          <li class="row"><span class="name">CHICKEN MARATHA (HALF)</span><span class="price">380/-</span></li>
+          <li class="row"><span class="name">CHICKEN MARATHA (FULL)</span><span class="price">700/-</span></li>
+          <li class="row"><span class="name">BUTTER CHICKEN (HALF)</span><span class="price">500/-</span></li>
+          <li class="row"><span class="name">BUTTER CHICKEN (FULL)</span><span class="price">1000/-</span></li>
+          <li class="row"><span class="name">CHICKEN MURG MUSSALAM (HALF)</span><span class="price">600/-</span></li>
+          <li class="row"><span class="name">CHICKEN MURG MUSSALAM (FULL)</span><span class="price">1200/-</span></li>
+          <li class="row"><span class="name">DHANYA MIRCH DA RAAND (HALF)</span><span class="price">450/-</span></li>
+          <li class="row"><span class="name">DHANYA MIRCH DA RAAND (FULL)</span><span class="price">850/-</span></li>
+          <li class="row"><span class="name">TANDOORI CHICKEN MASALA (HALF)</span><span class="price">450/-</span></li>
+          <li class="row"><span class="name">TANDOORI CHICKEN MASALA (FULL)</span><span class="price">900/-</span></li>
+
+          <li class="row"><span class="name">CHICKEN PATIALA</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">MUTTON MASALA</span><span class="price">350/-</span></li>
+
+          <li class="row"><span class="name">MUTTON HANDI REDBLACK (HALF)</span><span class="price">450/-</span></li>
+          <li class="row"><span class="name">MUTTON HANDI REDBLACK (FULL)</span><span class="price">850/-</span></li>
+          <li class="row"><span class="name">MUTTON MARATHA (HALF)</span><span class="price">500/-</span></li>
+          <li class="row"><span class="name">MUTTON MARATHA (FULL)</span><span class="price">1000/-</span></li>
+          <li class="row"><span class="name">MUTTON KOLHAPURI</span><span class="price">380/-</span></li>
+          <li class="row"><span class="name">MUTTON SUKHA</span><span class="price">380/-</span></li>
+          <li class="row"><span class="name">MUTTON ROAST</span><span class="price">380/-</span></li>
+          <li class="row"><span class="name">MUTTON BHUNA (RED BLACK)</span><span class="price">380/-</span></li>
+          <li class="row"><span class="name">EGG CURRY</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">EGG MASALA</span><span class="price">180/-</span></li>
+        </ul>
+      </section>
+
+      <!-- INDIAN BREADS -->
+      <section class="card">
+        <h3 class="card__title">INDIAN BREADS</h3>
+        <ul class="list">
+          <li class="row"><span class="name">ROTI</span><span class="price">20/-</span></li>
+          <li class="row"><span class="name">BUTTER ROTI</span><span class="price">30/-</span></li>
+          <li class="row"><span class="name">CRISPY MASALA ROTI</span><span class="price">40/-</span></li>
+          <li class="row"><span class="name">KULCHA</span><span class="price">50/-</span></li>
+          <li class="row"><span class="name">ONION KULCHA</span><span class="price">60/-</span></li>
+          <li class="row"><span class="name">PLAIN NAAN</span><span class="price">60/-</span></li>
+          <li class="row"><span class="name">METHI MARATHA</span><span class="price">80/-</span></li>
+          <li class="row"><span class="name">GARLIC NAAN</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">BUTTER NAAN</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">GARLIC BUTTER NAAN</span><span class="price">120/-</span></li>
+          <li class="row"><span class="name">ALOO PARATHA</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">GOBI PARATHA</span><span class="price">120/-</span></li>
+          <li class="row"><span class="name">PANEER PARATHA</span><span class="price">120/-</span></li>
+          <li class="row"><span class="name">CHEESE PARATHA</span><span class="price">130/-</span></li>
+          <li class="row"><span class="name">PANEER CHEESE PARATHA</span><span class="price">140/-</span></li>
+          <li class="row"><span class="name">ROTI KI TOKRI</span><span class="price">450/-</span></li>
+        </ul>
+      </section>
+
+      <!-- RICE -->
+      <section class="card">
+        <h3 class="card__title">RICE</h3>
+        <ul class="list">
+          <li class="row"><span class="name">STEAM RICE (HALF)</span><span class="price">80/-</span></li>
+          <li class="row"><span class="name">STEAM RICE (FULL)</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">JEERA RICE</span><span class="price">90/-</span></li>
+          <li class="row"><span class="name">MASALA RICE</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">VEG PULAO</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">VEG JAFFRANI PULAO</span><span class="price">200/-</span></li>
+          <li class="row"><span class="name">VEG BIRYANI</span><span class="price">260/-</span></li>
+          <li class="row"><span class="name">BUTTER DAL KHICHDA (HALF)</span><span class="price">150/-</span></li>
+          <li class="row"><span class="name">BUTTER DAL KHICHDA (FULL)</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">VEG DUM BIRYANI</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">PANEER BIRYANI</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">BUTTER DAL KHICHDA TADKA</span><span class="price">300/-</span></li>
+          <li class="row"><span class="name">VEG KASHMIRI PULAO</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">PANEER HYDERABADI BIRYANI</span><span class="price">320/-</span></li>
+          <li class="row"><span class="name">PANEER DUM BIRYANI</span><span class="price">350/-</span></li>
+          <li class="row"><span class="name">VEG FRIED RICE</span><span class="price">250/-</span></li>
+          <li class="row"><span class="name">ANDA BIRYANI</span><span class="price">450/-</span></li>
+          <li class="row"><span class="name">CHICKEN DUM BIRYANI</span><span class="price">400/-</span></li>
+        </ul>
+      </section>
+
+      <!-- SALAD & RAITA -->
+      <section class="card">
+        <h3 class="card__title">SALAD & RAITA</h3>
+        <ul class="list">
+          <li class="row"><span class="name">ROASTED PAPAD</span><span class="price">25/-</span></li>
+          <li class="row"><span class="name">FRIED PAPAD</span><span class="price">35/-</span></li>
+          <li class="row"><span class="name">KUCHUMBAR SALAD</span><span class="price">50/-</span></li>
+          <li class="row"><span class="name">SINDHI PAPAD</span><span class="price">60/-</span></li>
+          <li class="row"><span class="name">VEG RAITA</span><span class="price">70/-</span></li>
+          <li class="row"><span class="name">GREEN SALAD</span><span class="price">100/-</span></li>
+          <li class="row"><span class="name">BOONDI RAITA</span><span class="price">90/-</span></li>
+          <li class="row"><span class="name">PINEAPPLE RAITA</span><span class="price">120/-</span></li>
+          <li class="row"><span class="name">MIX FRUIT RAITA</span><span class="price">140/-</span></li>
+        </ul>
+      </section>
+
+      <!-- BEVERAGES -->
+      <section class="card">
+        <h3 class="card__title">BEVERAGES</h3>
+        <ul class="list">
+          <li class="row"><span class="name">WATER BOTTLE KINLEY</span><span class="price">20/-</span></li>
+          <li class="row"><span class="name">WATER BOTTLE (ORIGINAL BISLERI)</span><span class="price">30/-</span></li>
+          <li class="row"><span class="name">SOFT DRINKS (500/750 ML)</span><span class="price">60/-</span></li>
+          <li class="row"><span class="name">FRESH LEMON WATER</span><span class="price">40/-</span></li>
+          <li class="row"><span class="name">SWEET LASSI</span><span class="price">70/-</span></li>
+          <li class="row"><span class="name">PLAIN SODA</span><span class="price">40/-</span></li>
+          <li class="row"><span class="name">FRESH LIME SODA</span><span class="price">70/-</span></li>
+          <li class="row"><span class="name">JALJEERA SODA</span><span class="price">70/-</span></li>
+        </ul>
+      </section>
+
+      <!-- SPECIAL ITEMS -->
+      <section class="card card--highlight">
+        <h3 class="card__title">SPECIAL ITEMS</h3>
+        <ul class="list">
+          <li class="row"><span class="name">KRISHNA MASALA PAAN</span><span class="price">30/-</span></li>
+          <li class="row"><span class="name">ICE CREAM & DESSERT (OPTIONAL) — VANILLA / BUTTER SCOTCH / STRAWBERRY / MATKA KULFI</span><span class="price">—</span></li>
+        </ul>
+      </section>
+
+      <!-- MAKING CHARGES -->
+      <section class="card">
+        <h3 class="card__title">MAKING CHARGES</h3>
+        <ul class="list">
+          <li class="row"><span class="name">CHICKEN — SOUP / DRY / GRAVY (FOR 4–5 PEOPLE MAX)</span><span class="price">500 / KG</span></li>
+          <li class="row"><span class="name">MUTTON — SOUP / DRY / GRAVY (FOR 4–5 PEOPLE MAX)</span><span class="price">650 / KG</span></li>
+          <li class="row"><span class="name">FISH — DEEP FRY</span><span class="price">450 / KG</span></li>
+          <li class="row"><span class="name">FISH — PAN FRY</span><span class="price">550 / KG</span></li>
+          <li class="row"><span class="name">EXTRA CHEESE</span><span class="price">30/-</span></li>
+          <li class="row"><span class="name">EXTRA SCHEZWAN</span><span class="price">30/-</span></li>
+        </ul>
+      </section>
+
+
+         
+      <!-- Terms & Conditions -->
+      <section class="card">
+        <h3 class="card__title">TERMS & CONDITIONS</h3>
+        <ul class="list list--terms">
+          <li>RATES OF FOOD ITEMS MAY CHANGE 10-20 RS AS PER THE RATE VARIATIONS IN THE MARKET.</li>
+          <li>ORDER ONCE PLACED WILL TAKE 15-20 MINS AND CANNOT BE CANCELLED.</li>
+          <li>OUTSIDE FOOD ITEMS & DRINKS ARE NOT ALLOWED.</li>
+        </ul>
+      </section>
+
+      
+  <script src="script.js"></script>
+</body>
+</html>
